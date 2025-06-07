@@ -1,0 +1,420 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap Demo</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+      .fixed-img, #song-img, .fixed-img2, .card-img-fixed, #he-img {
+        height: 500px;
+        object-fit: cover;
+      }
+
+      body {
+        background-color: #FFFF37;
+      }
+
+      .container {
+        background-color: #FFFF37;
+        padding: 20px;
+        border-radius: 10px;
+      }
+
+      .card {
+        background-color: #FFFF37;
+      }
+
+      .card-body {
+        background-color: #FFFF37;
+      }
+
+      .navbar,
+footer,
+.custom-yellow {
+  background-color: #FFFF37 !important;
+}
+
+.navbar .nav-link,
+footer .nav-link,
+footer p {
+  color: #000000 !important;
+}
+
+.nav-link:hover {
+        text-decoration: none;
+        border-bottom: 1px dashed black;
+      }
+
+      .navbar-nav {
+        display: flex;
+        gap: 10px;
+      }
+
+      .search-form {
+        display: flex;
+        gap: 5px;
+        align-items: center;
+      }
+
+      .search-form input {
+        border-radius: 6px;
+      }
+
+      .search-form button {
+        border-radius: 6px;
+      }
+    </style>
+
+    <script>
+  function toggleArrow(el) {
+    setTimeout(() => {
+      const targetId = el.getAttribute('href').substring(1);
+      const collapseEl = document.getElementById(targetId);
+      const arrow = el.querySelector('.arrow-icon');
+      if (collapseEl.classList.contains('show')) {
+        arrow.textContent = '▼';
+      } else {
+        arrow.textContent = '▲';
+      }
+    }, 300);
+  }
+</script>
+  </head>
+  <body>
+    <div class="container">
+
+
+<nav style="background-color: #ffff33; padding: 0;">
+  <div class="container-fluid d-flex justify-content-between align-items-center px-3" style="padding-top: 10px; padding-bottom: 5px;">
+    
+    <!-- Logo 靠左對齊 -->
+    <img src="image7.png" alt="Logo" width="390px" height="150px" style="margin-bottom: 0;">
+
+    <!-- 導覽列 + 搜尋 -->
+    <div class="d-flex align-items-center gap-3" style="margin-top: 30px;">
+      <ul class="nav">
+        <li class="nav-item"><a class="nav-link text-primary" href="#"><h5>Home</h5></a></li>
+        <li class="nav-item"><a class="nav-link text-primary" href="#"><h5>About</h5></a></li>
+        <li class="nav-item"><a class="nav-link text-primary" href="#"><h5>Introduction</h5></a></li>
+        <li class="nav-item"><a class="nav-link text-primary" href="#"><h5>Contact</h5></a></li>
+      </ul>
+      <form class="d-flex">
+        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+        <button class="btn btn-outline-success" type="submit">Search</button>
+      </form>
+    </div>
+
+  </div>
+</nav>
+
+
+
+
+      <!-- 輪播圖區 -->
+      <div id="carouselExample" class="carousel slide">
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img src="image4.jpg" class="d-block w-100" alt="...">
+          </div>
+          <div class="carousel-item">
+            <img src="image6.webp" class="d-block w-100" alt="...">
+          </div>
+          <div class="carousel-item">
+            <img src="image5.jpg" class="d-block w-100" alt="...">
+          </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+
+      <!-- 第一排 4 張卡片 -->
+<div class="row row-cols-1 row-cols-md-4 g-4 mt-3">
+  <!-- 馬嘉祺卡片 -->
+  <div class="col">
+    <div class="card h-100">
+      <img src="image8.webp"
+           class="card-img-top"
+           alt="馬嘉祺"
+           style="height: 400px; object-fit: cover;">
+      <div class="card-body text-center">
+        <h5>
+          <a class="btn btn-link text-decoration-none d-inline-flex align-items-center"
+             data-bs-toggle="collapse"
+             href="#videoMaqi"
+             role="button"
+             aria-expanded="false"
+             aria-controls="videoMaqi"
+             onclick="toggleArrow(this)">
+            馬嘉祺 2002/12/12
+            <span class="ms-1 arrow-icon">▼</span>
+          </a>
+        </h5>
+        <div class="collapse" id="videoMaqi">
+          <div class="card card-body mt-2 text-center">
+            <a href="https://youtu.be/eICx_Z5jMeE" target="_blank">
+              <img src="https://img.youtube.com/vi/eICx_Z5jMeE/hqdefault.jpg"
+                   alt="影片預覽圖"
+                   class="img-fluid rounded"
+                   style="max-width: 100%;">
+              <p class="mt-2">點擊觀看影片</p>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 丁程鑫卡片 -->
+  <div class="col">
+    <div class="card h-100">
+      <img src="https://img.xingxiaoculture.com/origin/2024/08/30/70d40fdb8192bd4c19f1158b11428e231724987221.jpg"
+           class="card-img-top fixed-img"
+           alt="丁程鑫"
+           style="height: 400px; object-fit: cover;">
+      <div class="card-body text-center">
+        <h5>
+          <a class="btn btn-link text-decoration-none d-inline-flex align-items-center"
+             data-bs-toggle="collapse"
+             href="#videoDing"
+             role="button"
+             aria-expanded="false"
+             aria-controls="videoDing"
+             onclick="toggleArrow(this)">
+            丁程鑫 2002/02/24
+            <span class="ms-1 arrow-icon">▼</span>
+          </a>
+        </h5>
+        <div class="collapse" id="videoDing">
+          <div class="card card-body mt-2 text-center">
+            <a href="https://youtu.be/LtF5kh8BQ6o" target="_blank">
+              <img src="https://img.youtube.com/vi/LtF5kh8BQ6o/hqdefault.jpg"
+                   alt="影片預覽圖"
+                   class="img-fluid rounded"
+                   style="max-width: 100%;">
+              <p class="mt-2">點擊觀看影片</p>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 宋亞軒 -->
+  <div class="col">
+    <div class="card h-100">
+      <img src="394869.jpg"
+           class="card-img-top"
+           id="song-img"
+           alt="宋亞軒"
+           style="height: 400px; object-fit: cover;">
+      <div class="card-body text-center">
+        <h5>
+          <a class="btn btn-link text-decoration-none d-inline-flex align-items-center"
+             data-bs-toggle="collapse"
+             href="#videoSong"
+             role="button"
+             aria-expanded="false"
+             aria-controls="videoSong"
+             onclick="toggleArrow(this)">
+            宋亞軒 2004/03/04
+            <span class="ms-1 arrow-icon">▼</span>
+          </a>
+        </h5>
+        <div class="collapse" id="videoSong">
+          <div class="card card-body mt-2">
+            <a href="https://youtu.be/Iyqz5S6QLLQ" target="_blank">
+              <img src="https://img.youtube.com/vi/Iyqz5S6QLLQ/hqdefault.jpg" class="img-fluid rounded">
+              <p class="mt-2">點擊觀看影片</p>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 劉耀文 -->
+  <div class="col">
+    <div class="card h-100">
+      <img src="image3.jpg"
+           class="card-img-top fixed-img2"
+           alt="劉耀文"
+           style="height: 400px; object-fit: cover;">
+      <div class="card-body text-center">
+        <h5>
+          <a class="btn btn-link text-decoration-none d-inline-flex align-items-center"
+             data-bs-toggle="collapse"
+             href="#videoLiu"
+             role="button"
+             aria-expanded="false"
+             aria-controls="videoLiu"
+             onclick="toggleArrow(this)">
+            劉耀文 2005/09/23
+            <span class="ms-1 arrow-icon">▼</span>
+          </a>
+        </h5>
+        <div class="collapse" id="videoLiu">
+          <div class="card card-body mt-2">
+            <a href="https://youtu.be/lhjO1Ubb5Kc" target="_blank">
+              <img src="https://img.youtube.com/vi/lhjO1Ubb5Kc/hqdefault.jpg" class="img-fluid rounded">
+              <p class="mt-2">點擊觀看影片</p>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- 第二排 置中 3 張卡片（已修改） -->
+<div class="d-flex justify-content-center flex-wrap gap-3 mt-4">
+  <!-- 張真源 -->
+  <div class="card h-100" style="width: 18rem;">
+    <img src="https://img.xingxiaoculture.com/origin/2024/10/31/8e154d972870adfb1229b2cb1fa72cee1730371877.jpg"
+         class="card-img-top"
+         alt="張真源"
+         style="height: 400px; object-fit: cover;">
+    <div class="card-body text-center">
+      <h5>
+        <a class="btn btn-link text-decoration-none d-inline-flex align-items-center"
+           data-bs-toggle="collapse"
+           href="#videoZhang"
+           role="button"
+           aria-expanded="false"
+           aria-controls="videoZhang"
+           onclick="toggleArrow(this)">
+          張真源 2003/04/16
+          <span class="ms-1 arrow-icon">▼</span>
+        </a>
+      </h5>
+      <div class="collapse" id="videoZhang">
+        <div class="card card-body mt-2">
+          <a href="https://youtu.be/s3H9rtl_hno" target="_blank">
+            <img src="https://img.youtube.com/vi/s3H9rtl_hno/hqdefault.jpg" class="img-fluid rounded">
+            <p class="mt-2">點擊觀看影片</p>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 嚴浩翔 -->
+  <div class="card h-100" style="width: 18rem;">
+    <img src="https://img.xingxiaoculture.com/origin/2024/08/24/f2bf9a5596e28f2b47205c502ffe356c1724461093.jpg"
+         class="card-img-top card-img-fixed"
+         alt="嚴浩翔"
+         style="height: 400px; object-fit: cover;">
+    <div class="card-body text-center">
+      <h5>
+        <a class="btn btn-link text-decoration-none d-inline-flex align-items-center"
+           data-bs-toggle="collapse"
+           href="#videoYan"
+           role="button"
+           aria-expanded="false"
+           aria-controls="videoYan"
+           onclick="toggleArrow(this)">
+          嚴浩翔 2004/08/16
+          <span class="ms-1 arrow-icon">▼</span>
+        </a>
+      </h5>
+      <div class="collapse" id="videoYan">
+        <div class="card card-body mt-2">
+          <a href="https://youtu.be/j-yW2P8FsAw" target="_blank">
+            <img src="https://img.youtube.com/vi/j-yW2P8FsAw/hqdefault.jpg" class="img-fluid rounded">
+            <p class="mt-2">點擊觀看影片</p>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 賀峻霖 -->
+  <div class="card h-100" style="width: 18rem;">
+    <img src="images2.jpg"
+         class="card-img-top"
+         id="he-img"
+         alt="賀峻霖"
+         style="height: 400px; object-fit: cover;">
+    <div class="card-body text-center">
+      <h5>
+        <a class="btn btn-link text-decoration-none d-inline-flex align-items-center"
+           data-bs-toggle="collapse"
+           href="#videoHe"
+           role="button"
+           aria-expanded="false"
+           aria-controls="videoHe"
+           onclick="toggleArrow(this)">
+          賀峻霖 2004/06/15
+          <span class="ms-1 arrow-icon">▼</span>
+        </a>
+      </h5>
+      <div class="collapse" id="videoHe">
+        <div class="card card-body mt-2">
+          <a href="https://youtu.be/SxzTXT1QHlE" target="_blank">
+            <img src="https://img.youtube.com/vi/SxzTXT1QHlE/hqdefault.jpg" class="img-fluid rounded">
+            <p class="mt-2">點擊觀看影片</p>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Sticky Banner -->
+<div id="stickyBanner" class="bg-warning text-center p-3"
+     style="display: none; position: fixed; bottom: 0; left: 0; width: 100%; z-index: 9999;">
+  <span class="fw-bold">🎉 最新活動：點我抽神秘親簽小卡！</span>
+  <a href="https://example.com" class="btn btn-danger btn-sm ms-2">立即參加</a>
+</div>
+
+<!-- Sticky Banner 出現邏輯 -->
+<script>
+  window.addEventListener("scroll", function () {
+    const banner = document.getElementById("stickyBanner");
+    const triggerPoint = 50;
+    const footer = document.querySelector("footer");
+    const footerTop = footer.getBoundingClientRect().top;
+    const windowHeight = window.innerHeight;
+
+    if (window.scrollY > triggerPoint && footerTop > windowHeight) {
+      banner.style.display = "block";
+    } else {
+      banner.style.display = "none";
+    }
+  });
+</script>
+
+
+
+    </div> <!-- /.container -->
+
+
+    <footer class="py-4" style="background-color: #FFFF37;">
+  <div class="container-fluid text-center">
+    <div class="row justify-content-center">
+      <div class="col-auto">
+        <p class="mb-0 text-black">&copy; 2025</p>
+      </div>
+      <div class="col-auto">
+        <ul class="nav justify-content-center">
+          <li class="nav-item"><a href="#" class="nav-link px-2 text-black">SDFJ</a></li>
+          <li class="nav-item"><a href="#" class="nav-link px-2 text-black">TFBOYS</a></li>
+          <li class="nav-item"><a href="#" class="nav-link px-2 text-black">TNT</a></li>
+          <li class="nav-item"><a href="#" class="nav-link px-2 text-black">T.O.P</a></li>
+          <li class="nav-item"><a href="#" class="nav-link px-2 text-black">TF-Family</a></li>
+          <li class="nav-item"><a href="#" class="nav-link px-2 text-black">FanClub</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>
